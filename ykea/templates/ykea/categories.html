@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+<h1>Welcome to the Ykea home page!</h1>
+
+<h2>We only have one rule: NO REFUNDS</h2>
+
+{% if categories %}
+    <ul>
+    {% for category, description in categories %}
+    	<li><a href="{% url 'items' category %} "> {{category}}</a> : {{description}} </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No items are available.</p>
+{% endif %}
+
+{% endblock %}

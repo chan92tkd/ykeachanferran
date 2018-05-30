@@ -1,0 +1,150 @@
+<html>
+<style>
+
+header {
+    width: 100%;
+    border-bottom: 10px solid #000;
+    border-top: 10px solid #000;
+    height: 150px;
+    background-color: white;
+    font-weight: bold;
+}
+body{
+font-family: BrandonGrotesque-black,"futura-pt-1","futura-pt-2",Verdana,sans-serif;
+}
+.page_title {
+    max-width: 100%;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-family: BrandonGrotesque-black,"futura-pt-1","futura-pt-2",Verdana,sans-serif;
+    background-color: white;
+    
+}
+
+
+ul {
+    width: 100%;
+}
+
+
+li {
+    float:left;
+    margin-left: 20px;
+}
+
+
+a:link, a:visited {
+    color: white;
+    text-align: center;
+    padding-left: 25px;
+	font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    color: #f6ff00
+    
+    
+}
+
+@media (max-width: 600px) {
+/* Styles for screen with max width of 600px */
+    header {
+        height: auto;
+    }
+    .page_title {
+        margin: 0;
+        font-size: 45px;
+        text-align: center;
+    }
+}
+@media (max-width: 320px) {
+/* Styles for screen with max width of 320px */
+    header {
+        height: auto;
+    }
+    .page_title {
+        margin: 0;
+        font-size: 25px;
+    }
+}
+
+.title {
+    font-size:80px;
+}
+td.grey{
+background: #b8d1f3;
+}
+
+}
+.TFtableCol{
+		width:100%; 
+		border-collapse:collapse; 
+	}
+	.TFtableCol td{ 
+		padding:7px; border:#ffffff 1px solid;
+	}
+	/* improve visual readability for IE8 and below */
+	.TFtableCol tr{
+		 background: #ccc89f;
+	}
+
+	
+	/*  Define the background color for all the ODD table columns  */
+	.TFtableCol tr td:nth-child(even) {
+		 background: #737373;
+	}
+	/*  Define the background color for all the EVEN table columns  */
+	.TFtableCol  tr td:nth-child(odd) {
+		background: #cccccc;
+		
+	}
+td.grey{
+background: #b8d1f3;
+}
+
+
+</style>
+     <header>
+        {% load static from staticfiles %}
+        <div class="page_title">
+        <div style="text-align: center;">
+            <h1><a style="color:black;" href="/ykea">YKEA</a></h1></div>
+        </div>
+        <div style="float:left; width: 100%; padding-bottom: 20px; background: #000000">
+            <nav>
+                <ul>
+		    <li><a href="{% url 'index'%}">Home</a></li>
+		    
+                    <li><a href="{% url 'items'%}">All Items</a></li>
+
+                    <li><a href="{% url 'shoppingcart'%}">Shopping Cart</a></li>
+
+                    {% if user.is_authenticated %}
+                    <li style="float:right; margin-right: 140px"><a href="{% url 'logout'%}">Log out</a></li>
+
+                    <li style="float:right; margin-right: 30px"><span style="color: white; ">You are logged in as</span>
+                        <span style="color: yellow; ">{{ user.username }}</span></li>
+
+                        <li style="float:right; margin-right: 30px"><span style="color: white; ">Your money: </span>
+                        <span style="color: yellow; ">{{ user.client.cash }} €</span></li>
+
+                    {% else %}
+                    <li style="float:right; margin-right: 140px"><a href="{% url 'register'%}">Sign in</a></li>
+
+                    <li style="float:right; margin-right: 30px"><a href="{% url 'login'%}">Log in</a></li>
+                    {% endif %}
+                </ul>
+           </nav>
+       </div
+    </header>
+    <body style="background-color: #848484">
+        <div style="margin-top: 50px; align-content: center">
+        <br>
+        {% block content %}
+        {% endblock %}
+        </div>
+    </body>
+</html>

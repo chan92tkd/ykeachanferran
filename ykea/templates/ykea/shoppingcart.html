@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+<a href="{% url 'index' %}"> YKEA </a> /
+<a href="{% url 'shoppingcart' %}"> ShoppingCart </a>
+
+<h1> These are the items in your cart: </h1>
+
+{% if item_quantities %}
+<form action="{% url 'process'%}" method=post>
+    {% csrf_token %}
+    {% for items in item_quantities %}
+
+        <label>
+            <input type= checkbox name="checkbox{{ items.item.item_number }}" id="checkbox{{ items.item.item_number }}" value="{{ items.item.item_number }}"/>
+            <a href="{% url 'product' items.item.item_number %}"> {{items.item.name}} </a>
+            <br>
+            {{items.item.description}}
+            <br>
+            {{items.item.price}} €
+            <br>
+            quantity: {{ items.quantity }}
+            <br/>
+         </label>
+
+    {% endfor %}
+     <input type="submit" name="DELETE"   value="Delete this" />
+     <input type="submit" name="CHECKOUT" value="Proceed to checkout" />
+</form>
+{% else %}
+    <p>Bitch, this shopping cart empty!</p>
+{% endif %}
+
+{% endblock %}

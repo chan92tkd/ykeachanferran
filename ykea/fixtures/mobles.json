@@ -1,0 +1,159 @@
+[
+  {
+    "model": "ykea.Item",
+    "pk": 1,
+    "fields": {
+      "item_number": "09186777",
+      "name": "KONGSWDFJORD",
+      "description" :"Divan bed, Hyllestad firm, Tustna dark grey",
+      "price" : "1488",
+      "is_new" : "True",
+      "size" : "160x200 cm",
+      "category" : "beds"
+    }
+  },
+   {
+   "model": "ykea.Item",
+    "pk": 2,
+    "fields": {
+      "item_number": "70294339",
+      "name": "LISBAÖFJK",
+      "description" :"Table, ash veneer",
+      "price" : "99",
+      "is_new" : "False",
+      "size" : "140x78 cm",
+      "category" : "table"
+    }
+  },
+  {
+    "model": "ykea.Item",
+    "pk": 3,
+    "fields": {
+      "item_number": "61175625",
+      "name": "KOIKINALLÜM",
+      "description" :"More lumens than a spotlight from Camp Nou.",
+      "price" : "215",
+      "is_new" : "False",
+      "size" : "1000x1000x500 cm",
+      "category" : "light"
+    }
+  },
+  {
+    "model": "ykea.Item",
+    "pk": 4,
+    "fields": {
+      "item_number": "99549540",
+      "name": "REKIESKÄTINPACE",
+      "description" :"If Jesus had been buried in it, he would've taken longer than 3 days to come back",
+      "price" : "2999",
+      "is_new" : "False",
+      "size" : "190x200 cm",
+      "category" : "beds"
+    }
+  },
+  {
+    "model": "ykea.Item",
+    "pk": 5,
+    "fields": {
+      "item_number": "99987675",
+      "name": "TAVULARÄSA",
+      "description" :"Can we discard all pre-acquired knowledge and just accept that this table rocks?",
+      "price" : "80",
+      "is_new" : "True",
+      "size" : "160x200 cm",
+      "category" : "table"
+    }
+  },
+  {
+    "model": "ykea.Item",
+    "pk": 6,
+    "fields": {
+      "item_number": "43901888",
+      "name": "HINKTERÖGATORN",
+      "description" :"Get this off my face! Fine: I'll tell you what really happened that night",
+      "price" : "30",
+      "is_new" : "True",
+      "size" : "20x50 cm",
+      "category" : "light"
+    }
+  },
+  {
+    "model": "ykea.Item",
+    "pk": 7,
+    "fields": {
+      "item_number": "02627826",
+      "name": "FUTTÖN",
+      "description" :"Use the ground as a bedstead and see how the Earth really is flat!",
+      "price" : "15",
+      "is_new" : "True",
+      "size" : "100x200 cm",
+      "category" : "beds"
+    }
+  },
+  {
+    "model": "ykea.Item",
+    "pk": 8,
+    "fields": {
+      "item_number": "76932885",
+      "name": "TIAAGHATHA",
+      "description" :"Who killed the poor aunt? This table can sit all the suspects, plus the police officers.",
+      "price" : "600",
+      "is_new" : "False",
+      "size" : "100x200x10000 cm",
+      "category" : "table"
+    }
+  },
+  {
+    "model": "ykea.Item",
+    "pk": 9,
+    "fields": {
+      "item_number": "29185164",
+      "name": "ÜLLDEBOU",
+      "description" :"Set sail to bankruptcy with this pricy but discrete lighting apparatus.",
+      "price" : "2000",
+      "is_new" : "False",
+      "size" : "50x50 cm",
+      "category" : "light"
+    }
+  },
+  {
+    "model": "ykea.Item",
+    "pk": 10,
+    "fields": {
+      "item_number": "87113789",
+      "name": "DIBANTÖRO",
+      "description" :"Therapists have been using it for couple's therapy, lately",
+      "price" : "400",
+      "is_new" : "False",
+      "size" : "160x200 cm",
+      "category" : "beds"
+    }
+  },
+  {
+    "model": "ykea.Item",
+    "pk": 11,
+    "fields": {
+      "item_number": "84329173",
+      "name": "TAAULA",
+      "description" :"A plane, old, boring table. Except it's new. You can make it old, but it takes time.",
+      "price" : "50",
+      "is_new" : "True",
+      "size" : "300x300 cm",
+      "category" : "table"
+    }
+  },
+  {
+    "model": "ykea.Item",
+    "pk": 12,
+    "fields": {
+      "item_number": "25852081",
+      "name": "TIENENLAMPARÄSSDEPIE",
+      "description" :"Then sit them down, that they get tired.",
+      "price" : "90",
+      "is_new" : "True",
+      "size" : "160x20 cm",
+      "category" : "light"
+    }
+  }
+
+]

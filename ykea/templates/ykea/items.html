@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+<a href="{% url 'index' %}"> YKEA </a> / items / {% if category %} {{category}} {% endif %}
+
+<h1> {% if category %} {{category}}  {% else %} These are all our items: {% endif %}</h1>
+
+{% if items %}
+    <form action="{% url 'shoppingcart'%}" method="post">
+     {% csrf_token %}
+    {% for item in items %}
+    <label><input type= checkbox name="checkbox{{ item.item_number }}" id="checkbox{{ item.item_number }}" value="{{ item.item_number }}"/>
+   <a href="{% url 'product' item.item_number %}">
+   {{item.name}} </a> <br>
+            {{item.description}} <br>
+             {{item.price}} € <br/>
+ </label>
+    {% endfor %}
+    <br/>
+     <input type="submit" value="Add to Shopping cart" />
+	</form>
+{% else %}
+    <p>No items are available.</p>
+{% endif %}
+
+{% endblock %}

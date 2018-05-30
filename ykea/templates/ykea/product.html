@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+<a href="{% url 'index' %}"> YKEA </a> /
+<a href="{% url 'items' product.category %}"> {{ product.category }} </a> /
+<a href="{% url 'product' product.item_number %}"> {{ product.item_number }} </a>
+
+
+<h1>{{ product.name }}</h1>
+<strong>{{ product.description }}</strong>
+
+
+<p>Price: {{ product.price }}</p>
+
+{% if product.is_new %}
+
+    <p>This product is new!</p>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block content %}
+
+<a href="{% url 'index' %}"> YKEA </a> /
+<a href="{% url 'shoppingcart' %}"> ShoppingCart </a>
+
+<h1> You just bought these. They'll get home in about 3 working days (it's up to the delivery company, we can't be held accountable. Lo digo más que na porque te dirán que han venido y no estabas pero sí que estabas, ya, es una putada): </h1>
+{% if item_quantities %}
+    {% for items in item_quantities %}
+        <label>
+            <a href="{% url 'product' items.item.item_number %}"> {{items.item.name}} </a>
+            <br>
+            {{items.item.price}} €
+            <br>
+            quantity: {{ items.quantity }}
+            <br/>
+         </label>
+    {% endfor %}
+    <br/>
+    Total: {{total_price}} €
+    <br/>
+    <br/>
+</form>
+{% else %}
+    <p>Nothing to pay for</p>
+{% endif %}
+
+{% endblock %}
